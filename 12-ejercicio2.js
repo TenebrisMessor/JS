@@ -10,7 +10,7 @@ do{
     if(isNaN(numero)){
         numero = 0;
     }else if(numero >= 0){
-        suma = suma + numero;
+        suma = suma + numero; // es lo mismo que suma += numero
         contador++;
     }
     console.log(contador, suma);

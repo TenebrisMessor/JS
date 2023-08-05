@@ -1,7 +1,7 @@
 "use strict"
 
 /*Programa que pida dos numeros y que nos diga cual es el mayor o el menor  o si son iguales.*/
-
+// PULS si los numeros no son un numero o son menores o iguales a cero, nos lo vuelva a pedir.
 var numero1 = parseFloat(prompt("Introduce el primer numero", 0));
 var numero2 = parseFloat(prompt("Introduce el segundo numero", 0));
 
