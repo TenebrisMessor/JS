@@ -19,7 +19,11 @@ if(elemento>=nombres.length){
 
 document.write("<h1>Lenguajes de programación del 2019<h1>")
 document.write('<ul>')
-for(var i = 0; i < lenguajes.length; i++){
-    document.write('<li>'+lenguajes[i]+'</li>')
-}
+// for(var i = 0; i < lenguajes.length; i++){
+//     document.write('<li>'+lenguajes[i]+'</li>')
+// }
+lenguajes.forEach((elemento, index, /*data*/)=>{ //El primer parametro definira los elementos del array. El segundo parametro definira el indice de cada elemento y  el tercer parametro va a definir el arreglo completo. 
+    // console.log(data);
+    document.write("<li>"+index+"-"+elemento+"</li>");
+})
 document.write('</ul>')
