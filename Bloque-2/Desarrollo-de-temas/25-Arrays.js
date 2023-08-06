@@ -26,4 +26,19 @@ lenguajes.forEach((elemento, index, /*data*/)=>{ //El primer parametro definira 
     // console.log(data);
     document.write("<li>"+index+"-"+elemento+"</li>");
 })
+
+for(let lenguaje in lenguajes){ //se declara una variable para el indice
+    document.write("<li>"+lenguajes[lenguaje]+"</li>")//mgracias al for se permite recorrer todos los indices imprimiendo el lenguaje
+}
 document.write('</ul>')
+
+
+//Buscar dentro de un array
+var precios = [10, 20, 30, 80, 50];
+var busqueda= lenguajes.find(lenguaje => lenguaje == "PHP"); // se puede encontrar si un elemento existe dentro de un array o no. 
+var busquedas= lenguajes.findIndex(lenguaje => lenguaje == "JS"); // se puede encontrar si un elemento existe dentro de un array o no. 
+var busquedaa = precios.some(precio => precio > 10 ); //sirve para buscar dentro de un array utilizando condiciones
+
+console.log(busqueda);
+console.log(busquedas);
+console.log(busquedaa);
