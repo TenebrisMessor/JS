@@ -23,9 +23,9 @@ function sumame(numero1, numero2, sumaYmuestra, sumaPorDos){
     return sumar;
 }
 
-sumame(5,7, function(dato){  //pasando dos funciones anonimas como parametros. 
+sumame(5,7, dato => {  //una funcion flecha solo reemplaza la palabra reservada function por una flecha en este caso los parametros van antes de la flecha y si solo es un parametro pueden obviarse los parentesis. 
     console.log("La suma es: ", dato);
 }, 
-function(dato){
+function(dato){ //pasando dos funciones anonimas como parametros.
     console.log("La suma por dos es: ", (dato*2));
 })
