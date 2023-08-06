@@ -10,14 +10,43 @@
 (se valorará el uso de funciones)
 */
 
-var numeros = new Array(6);
-
+var numeros = new Array(6); // Declaro array y el numero de elementos que lleva
 
 for(let i=0; i<=5; i++){
     numeros[i] = parseInt(prompt("INTRODUCE "+(6-i)+" NUMEROS"))
-}
+} // Solicitar los numeros al usuario y colocarlos en el array
 
-
+// Mostrar los numeros en la consola
 console.log(numeros);
-console.log(numeros.sort());
-console.log(numeros.reverse());
+
+//Mostrar en orden ascendente
+numeros.sort((a, b) => a - b);
+document.write("<h1>Orden ascendente<h1>")
+document.write('<ul>')
+numeros.forEach((elemento)=>{ //El primer parametro definira los elementos del array. El segundo parametro definira el indice de cada elemento y  el tercer parametro va a definir el arreglo completo. 
+    document.write("<li>"+elemento+"</li>");
+    console.log(typeof elemento);
+})
+document.write('</ul>')
+
+//Mostrar en orden descendente
+numeros.sort((a, b) => b - a);
+document.write("<h1>Orden descendente<h1>")
+document.write('<ul>')
+for(let numero in numeros){ //se declara una variable para el indice
+     document.write("<li>"+numeros[numero]+"</li>")
+}
+document.write("</ul>")
+
+document.write("<p>El numero de elementos dentro de este arreglo es: "+numeros.length);
+
+
+// busqueda de un valor intriducido por el ususario. 
+var valor = prompt("Introduce el valor que deseas buscar en el string");
+var busqueda= numeros.find(numero => numero == valor ); // se puede encontrar si un elemento existe dentro de un array o no. 
+console.log(busqueda);
+if(busqueda == undefined){
+    document.write("<br>El Valor "+valor+" no existe dentro de este arreglo");
+}else{
+    document.write("<br>El Valor "+valor+" si existe dentro de este arreglo");
+}
