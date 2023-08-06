@@ -10,11 +10,25 @@
 (se valorará el uso de funciones)
 */
 
-var numeros = new Array(6); // Declaro array y el numero de elementos que lleva
+var numeros = []; // Declaro array y el numero de elementos que lleva
 
-for(let i=0; i<=5; i++){
-    numeros[i] = parseInt(prompt("INTRODUCE "+(6-i)+" NUMEROS"))
-} // Solicitar los numeros al usuario y colocarlos en el array
+for (let i = 0; i < 6;) {
+    const entrada = prompt("INTRODUCE " + (6 - i) + " NUMEROS");
+    const numero = parseInt(entrada);
+
+    if (!isNaN(numero)) {
+        numeros.push(numero);
+        i++; // Incrementar el contador solo si se ingresa un número válido
+    } else {
+        alert("¡Error! Debes ingresar un número válido.");
+    }
+}
+
+
+// for(let i = 0; i<=5; i++){
+//     numeros[i] = parseInt(prompt("INTRODUCE "+(6-i)+" NUMEROS"))
+//     if(numeros)
+// } // Solicitar los numeros al usuario y colocarlos en el array
 
 // Mostrar los numeros en la consola
 console.log(numeros);
