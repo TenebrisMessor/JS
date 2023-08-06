@@ -17,13 +17,13 @@ var pelicula = function(nombre){
 function sumame(numero1, numero2, sumaYmuestra, sumaPorDos){
     var sumar = numero1 + numero2;
 
-    sumaYmuestra(sumar);
-    sumaPorDos(sumar);
+    sumaYmuestra(sumar); //
+    sumaPorDos(sumar); //Invocando los parametros a los que se les asignaron las dos funciones anonimas. 
 
     return sumar;
 }
 
-sumame(5,7, function(dato){
+sumame(5,7, function(dato){  //pasando dos funciones anonimas como parametros. 
     console.log("La suma es: ", dato);
 }, 
 function(dato){
