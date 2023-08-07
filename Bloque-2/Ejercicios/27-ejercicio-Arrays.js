@@ -25,11 +25,6 @@ for (let i = 0; i < 6;) {
 }
 
 
-// for(let i = 0; i<=5; i++){
-//     numeros[i] = parseInt(prompt("INTRODUCE "+(6-i)+" NUMEROS"))
-//     if(numeros)
-// } // Solicitar los numeros al usuario y colocarlos en el array
-
 // Mostrar los numeros en la consola
 console.log(numeros);
 
