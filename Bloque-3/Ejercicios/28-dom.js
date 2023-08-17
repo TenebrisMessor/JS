@@ -9,8 +9,9 @@ var cambiaColor = (color) =>{
 //conseguir elemenots con un ID concreto
 //Conseguir elementos por su etiqueta 
 var todoslosDivs = document.getElementsByTagName('div');
-console.log(todoslosDivs);
-var contenidoentexto = todoslosDivs[2].textContent;
+todoslosDivs.forEach((valor,indice) => {
+    
+});
 
 
 // Conseguir elementos por su clase
