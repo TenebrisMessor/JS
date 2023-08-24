@@ -25,6 +25,9 @@ var cambiaColor = (color) =>{
 // }
 
 /**************************************************************************************************UTILIZANDO FOR EACH*******************************************/ 
+var seccion = document.querySelector("#miseccion");
+var hr = document.createElement("hr")
+
 var todoslosDivs = Array.from(document.getElementsByTagName('div')); // Obtienes un HTMLCollection de elementos div
 var valor;
 todoslosDivs.forEach(valor => {
@@ -33,11 +36,11 @@ todoslosDivs.forEach(valor => {
         var parrafo = document.createElement("p");
         var texto = document.createTextNode(valor.textContent);
         parrafo.appendChild(texto);
-        document.querySelector("#miseccion").prepend(parrafo);
+        document.querySelector("#miseccion").append(parrafo);
     }
 });
 
-
+seccion.append(hr);
 // Conseguir elementos por su clase
 
 
